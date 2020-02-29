@@ -28,3 +28,19 @@ public void greet(aBlockOfCode){
 }
 
 greet method can be called as greet(aBlockOfCode) or greet(() -> System.out.print("Hello World"));
+
+Another ex.,
+To write a lambda expression that takes an argument and returns some value,
+for ex., 
+public int doubleNumberFunction(int a){return a *2};
+can be written as lambdaexpression as,
+doubleNumberFunction = (int a) -> a*2;
+
+another ex.
+addFunction = (int a, int b ) -> a+b;
+divideFunction(int a, int b) -> {
+ if(b == 0) return 0;
+ return  a/b;
+}
+
+In divideFunction, {} - > is present because lambda expression is more tha  one line, also return is present becasue {} is present.
