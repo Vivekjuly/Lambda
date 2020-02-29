@@ -1,0 +1,30 @@
+Lambda refers to functional programming
+
+its like calling a method like a inline variable. 
+lets say, String name = 'foo';
+double pi = 3.14;
+Similarly we are assigning a function/,method to a varaible and when the variable name is  called, the fucntion will be called
+Piece of code becomes a value that gets assigned to a varaiable.
+for ex., a method with block of code
+public void perform(){
+  System.out.print("Hello World");
+}
+
+To create lambda expression for the same,
+remove public ( as public makes sense if its part of class, but in isolation the variable will be accessed by whoever has access)
+remove method name as variable name will be used to access
+remove return type - as from java 8 , java compiler can identify what the return type.
+add ' -> ' in between paranthesis and block of code
+so the final lambda expression for the above method is,
+
+aBlockOfCode = () -> {  System.out.print("Hello World");}
+If body of lambda expression is single line, then it can be also written as
+aBlockOfCode = () -> System.out.print("Hello World");
+
+so like a variable, we can pass it in method, for ex.,
+if there is a method greet which takes aBlockOfCode,then
+public void greet(aBlockOfCode){
+   
+}
+
+greet method can be called as greet(aBlockOfCode) or greet(() -> System.out.print("Hello World"));
