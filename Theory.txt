@@ -44,3 +44,13 @@ divideFunction(int a, int b) -> {
 }
 
 In divideFunction, {} - > is present because lambda expression is more tha  one line, also return is present becasue {} is present.
+stringLengthFinder = (String s) -> s.length(); - returns length of s.
+
+When creating lambda expression, the type should be declared as interface say for ex., for the below lambda expression,
+aBlockOfCode = () -> {  System.out.print("Hello World");}
+type should be , an interface with any name
+interface myLambda(){ //interface name can be anything
+  void myLamb(); //return type and number of arguments should be exactly same as the lambda expression
+}
+so the lambda expression should be,
+myLamb aBlockOfCode = () -> {  System.out.print("Hello World");}
