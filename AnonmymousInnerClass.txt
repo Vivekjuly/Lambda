@@ -1,0 +1,38 @@
+Ex.,
+if we have an interface Greeting,
+Greeting.java
+
+Public interface Greeting(){
+  public void Perform();
+}
+
+If there is a HelloWorldGreeting class which implements Greeting 
+then 
+
+Public class HelloWorldGreeting implements Greeting{
+  public void perform(){
+    System.out.println("Hello World");
+  }
+}
+
+In another class, Greeter.java
+public class Greeter{
+
+  public void greet(Greeting greeting){
+    greeting.perform();
+  }
+  
+  public static void main(String[] args){
+    Greeter greeter = new Greeter();
+    HelloWorldGreeting helloWorldGreeting = new HelloWorldGreeting();
+    greeter.greet(helloWorldGreeting);
+    
+    // inline implementation of an interface is called anonymous inner class.class defined inside a class
+    Greeting innerClassGreeting = new Greeting(){
+      public void perform(){
+        System.out.println("Hello World");
+      }
+    }
+    
+  }
+}
